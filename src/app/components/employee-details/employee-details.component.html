@@ -1,1 +1,37 @@
-<p>employee-details works!</p>
+<div class="container">
+  <div class="col-md-6 offset-md-3 p-3 alert-warning">
+    <div class="row">
+      <div class="col-3">
+        <label for="firstName" class="h4 my-2">First name: </label>
+      </div>
+      <div class="col">
+        <p id="firstName" class="h4 my-2"> {{ employee.first_name }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label for="lastName" class="h4 my-2">Last name: </label>
+      </div>
+      <div class="col">
+        <p id="lastName" class="h4 my-2"> {{ employee.last_name }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label for="age" class="h4 my-2">Age: </label>
+      </div>
+      <div class="col">
+        <p id="age" class="h4 my-2"> {{ employee.age }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label for="profession" class="h4 my-2">Profession: </label>
+      </div>
+      <div class="col">
+        <p id="profession" class="h4 my-2"> {{ employee.profession }}</p>
+      </div>
+    </div>
+  </div>
+  <button class="col-md-1 offset-md-3 btn btn-warning my-2" (click)="onReturn()">Back</button>
+</div>

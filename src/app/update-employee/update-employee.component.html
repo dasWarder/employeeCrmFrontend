@@ -1,1 +1,40 @@
-<p>update-employee works!</p>
+<div class="container">
+  <div class="col-md-6 offset-md-3">
+    <form (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <label class="my-2" for="firstName">First name</label>
+          <input id="firstName" [value]="employee.first_name" name="firstName" type="text" class="form-control" placeholder="Enter first name" [(ngModel)]="employee.first_name">
+        </div>
+        <div class="col">
+          <label for="lastName" class="my-2">Last name</label>
+          <input id="lastName" [value]="employee.last_name" name="lastName" type="text" class="form-control" placeholder="Enter last name" [(ngModel)]="employee.last_name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="age" class="my-2">Age</label>
+          <input id="age" [value]="employee.age" type="number" name="age" class="form-control" placeholder="Enter age" [(ngModel)]="employee.age">
+        </div>
+        <div class="col">
+          <label class="my-2" for="profession">Profession</label>
+          <select id="profession" [value]="employee.profession" name="profession" class="form-control" [(ngModel)]="employee.profession">
+            <option selected>-</option>
+            <option>Software Engineer</option>
+            <option>Human Resources</option>
+            <option>Quality Assurance</option>
+            <option>Product Manager</option>
+            <option>Chief Executive Office</option>
+          </select>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col">
+          <button type="button" class="btn btn-warning me-3" (click)="onReturn()">Back</button>
+          <button type="button" class="btn btn-warning me-3" (click)="onClean()">Clean</button>
+          <button type="submit" class="btn btn-success mx-3">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
